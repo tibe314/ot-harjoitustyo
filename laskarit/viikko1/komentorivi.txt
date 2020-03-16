@@ -19,3 +19,6 @@ kurssit
                                 └── unicafe
                                     └── MaksukorttiTest.java
 
+
+
+epäsynkronointitesti
