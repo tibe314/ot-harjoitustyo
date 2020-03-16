@@ -1,0 +1,104 @@
+commit 234a52a75d1b52c78e350321715a4ecc6c830656
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Mon Mar 16 17:45:05 2020 +0200
+
+    harjoittelua
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0f4ea74efd7d420dd30b4b0644885b8764b206ce
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Mon Mar 16 17:40:49 2020 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9eace2d4cbea12ed970e0f134c5be62ead142c6d
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 17:04:32 2020 +0200
+
+    muutoksia
+
+ eka.txt    | 3 +--
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit a39ad65e2c0aa6ee9f7a36c2e9e1ffb3533b260e
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:45:44 2020 +0200
+
+    nimetty uudestaan
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e42e9e10312bed1d2d8d108e65f929c49e952af4
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:45:02 2020 +0200
+
+    toinen poistettu'd
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1810e6ab6ae95c0eba66527675f8715748696c22
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:43:10 2020 +0200
+
+    kissa
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 50eb9261132e2340a993753d3fec747f4dc4f4f2
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:36:30 2020 +0200
+
+    lisää tekstiä
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 2352f949213261affb3d06db0134acf17bfa3d7f
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:35:32 2020 +0200
+
+    asdasdasd
+
+ tiedosto.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 8d3c7b8276b91eb33326c518cbb01fa718dc5265
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:23:27 2020 +0200
+
+    hakemiston lisäys
+
+ kolmas.txt        | 0
+ stuff/imstuff.txt | 1 +
+ 2 files changed, 1 insertion(+)
+
+commit dea4d723e1b62a50c781e5b8b319ad7a69888a77
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:13:12 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit df7e79f5fc56a75bfa704aba1d128c1fa91c427c
+Author: tibe314 <tino.berg@helsinki.fi>
+Date:   Thu Mar 12 16:05:54 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
