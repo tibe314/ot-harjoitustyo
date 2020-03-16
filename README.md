@@ -10,3 +10,5 @@ ja muut :D kannattaa kattoo nopee
 - [komentorivi.txt](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 tämä teksti kirjoitettiin komentoriviltä, aika villiä!
+
+nyt kokeillaan repositorioiden epäsynkronointia
