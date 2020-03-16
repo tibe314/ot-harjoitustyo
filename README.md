@@ -8,3 +8,5 @@ ja muut :D kannattaa kattoo nopee
 ## viikko 1
 - [gitlog.txt](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 - [komentorivi.txt](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+
+tämä teksti kirjoitettiin komentoriviltä, aika villiä!
