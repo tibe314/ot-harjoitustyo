@@ -12,3 +12,6 @@ ja muut :D kannattaa kattoo nopee
 tämä teksti kirjoitettiin komentoriviltä, aika villiä!
 
 nyt kokeillaan repositorioiden epäsynkronointia
+
+## viikko 2
+- [testikattavuus-screenshot](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuus.png)
