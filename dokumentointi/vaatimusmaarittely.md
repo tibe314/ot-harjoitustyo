@@ -6,7 +6,7 @@ Sovelluksen tarkoitus on ratkaista [Sanajahti](https://fi.wikipedia.org/wiki/San
 kaikki suomen kielen sanat (ladattavissa mm. Kotuksen sivuilta) käyttäjän antamasta 4x4 ruudukosta. Sovelluksen käyttöliittymä
 mielellään antaisi käyttöliittymässään graafisesti jonkinlaisen avun sanan "piirtämiseen" kuten ensimmäisen ja viimeisen 
 kirjaimen korostus sekä nuolilla tms. avuilla sanan "reitin" (ks. käyttöliittymäluonnos) näyttäminen. Sovelluksessa
-on myös mahdollista kotuspoistaa ja lisätä sanoja sovelluksen tietokantaan, sillä Sanajahdin ja Kotuksen sanatietokannat eivät liene täysin identtiset.
+on myös mahdollista poistaa ja lisätä sanoja sovelluksen tietokantaan, sillä Sanajahdin ja Kotuksen sanatietokannat eivät liene täysin identtiset.
 
 
 ## Käyttöliittymäluonnos
