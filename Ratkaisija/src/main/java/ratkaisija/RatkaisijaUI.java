@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ratkaisija;
 
 /**
@@ -22,6 +18,9 @@ public class RatkaisijaUI extends Application {
 
     @Override
     public void start(Stage view) {
+        Algorithm a = new Algorithm();
+        
+        //starting view
         view.setTitle("Sanajahtiratkaisija");
         BorderPane first = new BorderPane();
         TextField text = new TextField("Syötä sanaruudukko (ilman välimerkkejä, esim. abcdefghijklmnop)");
@@ -29,8 +28,9 @@ public class RatkaisijaUI extends Application {
         nextview.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (text.getText().length() == 16) {
-                    //TODO: lähetä .getText() algoritmille, ja siirry seuraavaan näkymään
+                a.setInput(text.getText());
+                if (a.checkInputLenght()) {
+                    //TODO: suorita sananetsintäalgoritmi, do blackmagic
                     System.out.println("TODO");
                 }
                 else {
