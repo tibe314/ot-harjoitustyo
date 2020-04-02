@@ -9,12 +9,21 @@ public class Algorithm {
     
     private String input;
     
-    public void setInput(String s) {
-        this.input = s;
+    public Algorithm() {
+        WordScanner myWS = new WordScanner();
     }
     
-    public boolean checkInputLenght() {
-        return input.length() == 16;
+    public boolean checkInputLenght(String userInput) {
+        return userInput.length() == 16;
     }
+    
+    public void setInput(String s) {
+        this.input = s;
+        System.out.println("");
+    }
+    
+    public String getInput() {
+        return this.input;
+    }  
     
 }

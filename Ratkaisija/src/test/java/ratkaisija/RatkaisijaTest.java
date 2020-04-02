@@ -36,20 +36,25 @@ public class RatkaisijaTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
+
+    //Write tests here:
+    
     @Test
     public void algorithmRecognizesIncorrectInputs() {
-        a.setInput("this should be false"); //20 characters
-        Boolean result = a.checkInputLenght();
-        assertEquals(false, result);
+        assertEquals(false, a.checkInputLenght("this should be false"));
     }
     
     @Test
     public void algorithmRecognizesCorrectInputs() {
-        a.setInput("aaaaaaaaaaaaaaaa"); //16 a's, -> true
-        Boolean result = a.checkInputLenght();
-        assertEquals(true, result);
+        assertEquals(true, a.checkInputLenght("aaaaaaaaaaaaaaaa")); //16 a's -> true
+    }
+    
+    @Test
+    public void algorithmSetsInputCorrectly() {
+        String testString = "kuustoistacharia";
+        if (a.checkInputLenght(testString)) { //check if test input is of correct lenght (it is), pretty redundant given
+            a.setInput(testString);           //test no. 2 but eh
+        }
+        assertEquals(testString, a.getInput());
     }
 }

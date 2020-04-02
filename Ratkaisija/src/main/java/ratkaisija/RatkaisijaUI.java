@@ -22,25 +22,26 @@ public class RatkaisijaUI extends Application {
         
         //starting view
         view.setTitle("Sanajahtiratkaisija");
-        BorderPane first = new BorderPane();
-        TextField text = new TextField("Syötä sanaruudukko (ilman välimerkkejä, esim. abcdefghijklmnop)");
-        Button nextview = new Button("Löydä sanat");
-        nextview.setOnAction(new EventHandler<ActionEvent>() {
+        BorderPane startingPane = new BorderPane();
+        TextField inputText = new TextField("Syötä sanaruudukko (ilman välimerkkejä, esim. abcdefghijklmnop)");
+        Button nextViewButton = new Button("Löydä sanat");
+        nextViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                a.setInput(text.getText());
-                if (a.checkInputLenght()) {
+                boolean validInput = a.checkInputLenght(inputText.getText());
+                if (validInput) {
                     //TODO: suorita sananetsintäalgoritmi, do blackmagic
+                    a.setInput(inputText.getText());
                     System.out.println("TODO");
                 }
                 else {
-                    text.setText("Väärä syötteen pituus!");
+                    inputText.setText("Väärä syötteen pituus!");
                 }
             }
         });
-        first.setCenter(text);
-        first.setBottom(nextview);
-        Scene myscene = new Scene(first, 460, 100);
+        startingPane.setCenter(inputText);
+        startingPane.setBottom(nextViewButton);
+        Scene myscene = new Scene(startingPane, 460, 100);
         view.setScene(myscene);
 
         view.show();
