@@ -1,20 +1,15 @@
-# Otsikko
+# Sanajahtiratkaisija
 
-iha ok, mut ootko kattonu simpsonit sarjasta jakson **himo läski homer :D**
-siinä esiintyy koko simpsonit perhe, eli myös *bart simpsons **homer** poika*
-fanit saavat nauraa, ja naurattaahan se tietty myös vaikka homerin läski kuteet
-ja muut :D kannattaa kattoo nopee
+Sovelluksen avulla käyttäjän on mahdollista ratkaista [Sanajahti](https://fi.wikipedia.org/wiki/Sanajahti)-peli, eli löytää annetusta 4\*4-kirjainruudukosta kaikki suomen kielen sanat.
+
+Sovelluksen tarkoitus on olla osa Helsingin Yliopiston *Ohjelmistotekniikka*-kurssin suoritusta.
 
 ## Dokumentointi
 - [Vaatimusmäärittely](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+- [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
-## viikko 1
-- [gitlog.txt](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-- [komentorivi.txt](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Tämänhetkinen toiminnallisuus
 
-tämä teksti kirjoitettiin komentoriviltä, aika villiä!
+### 31.3.2020
 
-nyt kokeillaan repositorioiden epäsynkronointia
-
-## viikko 2
-- [testikattavuus-screenshot](https://github.com/tibe314/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuus.png)
+Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon. Nappia painamalla ohjelma tarkistaa onko käyttäjän syöte oikean mittainen (eli onko siinä 16 merkkiä).
