@@ -15,9 +15,12 @@ public class WordScanner {
     public WordScanner() {
         Setup();
     }
-    
+
+    //Creates user's own database of finnish words the first time the program is executed
+    //(or if the database file 'PrivateWordList.txt' somehow gets deleted
     private void Setup() {
         File privateWordList = new File("PrivateWordList.txt");
+        System.out.println("Wordscanner setup debug sout: " + privateWordList.exists());
         if (!privateWordList.exists()) {
             //create PrivateWordList.txt
             try {
@@ -28,18 +31,27 @@ public class WordScanner {
 
             //add the contents of WordListFinnish to a temporary ArrayList
             ArrayList<String> tempList = new ArrayList<>();
-            try (Scanner tiedostonLukija = new Scanner(new File("WordListFinnish.txt"))) {
+            try ( Scanner wordScanner = new Scanner(new File("WordListFinnish.txt"))) {
 
-                // luetaan kaikki tiedoston rivit
-                while (tiedostonLukija.hasNextLine()) {
-                    tempList.add(tiedostonLukija.nextLine().substring(7));
+                while (wordScanner.hasNextLine()) {
+                    tempList.add(wordScanner.nextLine());
                 }
             } catch (Exception e) {
-                System.out.println("Virhe: " + e.getMessage());
+                System.out.println("Virhe tapahtui: " + e.getMessage());
             }
 
+            //move the contents of the ArrayList to the newly created file
+            try {
+                FileWriter myWriter = new FileWriter("PrivateWordList.txt");
+                for (String s : tempList) {
+                    myWriter.write(s + "\n");
+                }
+                myWriter.close();
+            } catch (IOException e) {
+                System.out.println("Virhe tapahtui: " + e.getMessage());
+                
+            }
         }
-        //System.out.println(privateWordList.exists());
+        //if the file exists, nothing is done
     }
-
 }

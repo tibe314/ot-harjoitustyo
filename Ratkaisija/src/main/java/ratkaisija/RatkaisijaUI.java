@@ -25,6 +25,9 @@ public class RatkaisijaUI extends Application {
         BorderPane startingPane = new BorderPane();
         TextField inputText = new TextField("Syötä sanaruudukko (ilman välimerkkejä, esim. abcdefghijklmnop)");
         Button nextViewButton = new Button("Löydä sanat");
+        Button dataBaseEdit = new Button("Muokkaa tietokantaa");
+        
+        //nextViewButton
         nextViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -39,8 +42,18 @@ public class RatkaisijaUI extends Application {
                 }
             }
         });
-        startingPane.setCenter(inputText);
-        startingPane.setBottom(nextViewButton);
+        
+        //dataBaseEdit button
+        dataBaseEdit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("TODO");
+            }
+        });
+        
+        startingPane.setTop(inputText);
+        startingPane.setLeft(nextViewButton);
+        startingPane.setRight(dataBaseEdit);
         Scene myscene = new Scene(startingPane, 460, 100);
         view.setScene(myscene);
 

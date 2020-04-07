@@ -19,7 +19,6 @@ public class Algorithm {
     
     public void setInput(String s) {
         this.input = s;
-        System.out.println("");
     }
     
     public String getInput() {
