@@ -10,7 +10,7 @@ public class Algorithm {
     private String input;
     
     public Algorithm() {
-        WordScanner myWS = new WordScanner();
+        //WordScanner myWS = new WordScanner();
     }
     
     public boolean checkInputLenght(String userInput) {

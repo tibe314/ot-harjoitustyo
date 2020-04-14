@@ -1,6 +1,8 @@
 
 package ratkaisija;
 
+import java.io.File;
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,6 +17,9 @@ import static org.junit.Assert.*;
 public class RatkaisijaTest {
     
     Algorithm a;
+    WordScanner wc;
+    DatabaseHandler dbh;
+    File testfile;
 
     public RatkaisijaTest() {
     }
@@ -30,10 +35,20 @@ public class RatkaisijaTest {
     @Before
     public void setUp() {
         a = new Algorithm();
+        wc = new WordScanner();
+        dbh = new DatabaseHandler();
+        
+        testfile = new File("testfile.txt");
+        try {
+            testfile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @After
     public void tearDown() {
+        testfile.delete();
     }
 
 
@@ -56,5 +71,51 @@ public class RatkaisijaTest {
             a.setInput(testString);           //test no. 2 but eh
         }
         assertEquals(testString, a.getInput());
+    }
+    
+    @Test
+    public void testFileIsCreated() {
+        assertTrue(testfile.exists());
+    }
+    
+    @Test
+    public void wordsCanBeAddedAndChecked() {
+        wc.addWord("aaa", testfile);
+        assertTrue(wc.checkWord("aaa",testfile));
+    }
+    
+    @Test
+    public void nonexistentWordsArentFound() {
+        assertFalse(wc.checkWord("bbb",testfile));
+    }
+    
+    @Test
+    public void databaseHandlerDoesntAddExistingWords() {
+        wc.addWord("aaa",testfile);
+        assertFalse(dbh.addWord("aaa",testfile));
+    }
+    
+    @Test
+    public void databaseHandlerCanAddWords() {
+        assertTrue(dbh.addWord("aaa",testfile));
+        assertFalse(dbh.addWord("aaa",testfile));
+    }
+    
+    @Test
+    public void wordsCanBeDeleted() {
+        wc.addWord("aaa", testfile);
+        wc.delWord("aaa", testfile);
+        assertFalse(wc.checkWord("aaa", testfile));
+    }
+    
+    @Test
+    public void databaseHandlerDeletesWord() {
+        assertTrue(dbh.addWord("aaa", testfile));
+        assertTrue(dbh.delWord("aaa", testfile));
+    }
+    
+    @Test
+    public void databaseHandlerReturnsFalseWhenDeletingNonexistentWord() {
+        assertFalse(dbh.delWord("asdasdasdasd", testfile));
     }
 }
