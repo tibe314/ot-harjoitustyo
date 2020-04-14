@@ -47,3 +47,7 @@ mvn package
 ### 31.3.2020
 
 Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon. Nappia painamalla ohjelma tarkistaa onko käyttäjän syöte oikean mittainen (eli onko siinä 16 merkkiä).
+
+### 14.4.2020
+
+Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käyttäjälle oman sanatietokannan, jota on mahdollista muokata lisäämällä ja poistamalla sanoja. Tietokannan voi myös palauttaa alkuperäiseen muotoon.
