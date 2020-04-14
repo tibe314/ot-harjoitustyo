@@ -9,6 +9,7 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 ## Dokumentointi
 - [Vaatimusmäärittely](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
+- [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
 ## Tämänhetkinen toiminnallisuus
 
