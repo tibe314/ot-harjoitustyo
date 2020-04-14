@@ -11,6 +11,28 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+## Komentorivitoiminnot
+Sovelluksen voi ajaa komentoriviltä komennolla
+```
+mvn compile exec:java -Dexec.mainClass=ratkaisija.Sanajahtiratkaisija
+```
+### Testaus
+Testauksen voi suorittaa komennolla
+```
+mvn test
+```
+ja testikattavuusraportin komennolla
+```
+mvn test jacoco:report
+```
+Raportti luetaan avaamalla selaimella _target/site/jacoco/index.html_
+### Checkstyle-raportti
+Checkstyle-raportin luonti onnistuu komennolla
+```
+mvn jxr:jxr checkstyle:checkstyle
+```
+Ja raportin voi tarkistaa avaamalla selaimessa _target/site/checkstyle.html_
+
 ## Tämänhetkinen toiminnallisuus
 
 ### 31.3.2020
