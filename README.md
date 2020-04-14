@@ -33,6 +33,12 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 Ja raportin voi tarkistaa avaamalla selaimessa _target/site/checkstyle.html_
 
+### Jar-tiedoston luominen
+Jar-tiedoston luonti tapahtuu komennolla
+```
+mvn package
+```
+
 ## Tämänhetkinen toiminnallisuus
 
 ### 31.3.2020
