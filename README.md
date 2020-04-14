@@ -11,6 +11,9 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+## Releaset
+- [Viikko 5](https://github.com/tibe314/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 Sovelluksen voi ajaa komentoriviltä komennolla
 ```
