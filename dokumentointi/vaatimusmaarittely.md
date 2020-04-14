@@ -20,8 +20,8 @@ kirjainruudukossa sanojen reitit.
 
 - Sovellukselle on mahdollista syöttää näppäimistöltä kirjainruudukko, jonka jälkeen sovellus jonkinlaista
 polunetsintäalgoritmia käyttäen löytää kaikki sanat mitä sovellus sanatietokannassaan sisältää.
-- Sovellukseen on mahdollista lisätä ja poistaa sanoja
-- Sovelluksen sanatietokannan voi "palauttaa tehdasasetuksiin"
+- ~Sovellukseen on mahdollista lisätä ja poistaa sanoja~ **TEHTY**
+- ~Sovelluksen sanatietokannan voi "palauttaa tehdasasetuksiin"~ **TEHTY**
 - Käyttäjä voi syöttää uuden kirjainruudukon uudelleenkäynnistämättä sovellusta
 
 ## Jatkokehitysideoita
