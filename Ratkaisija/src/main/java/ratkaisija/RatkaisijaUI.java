@@ -1,4 +1,3 @@
-
 package ratkaisija;
 
 /**
@@ -6,14 +5,23 @@ package ratkaisija;
  * @author tino
  */
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+
+import javafx.scene.text.Font;
 
 public class RatkaisijaUI extends Application {
 
@@ -28,18 +36,17 @@ public class RatkaisijaUI extends Application {
         TextField inputText = new TextField("Syötä sanaruudukko (ilman välimerkkejä, esim. abcdefghijklmnop)");
         Button nextViewButton = new Button("Löydä sanat");
         Button dataBaseEdit = new Button("Muokkaa tietokantaa");
-        
+
         //1.2 make pane and add elements
         BorderPane startingPane = new BorderPane();
-        
+
         startingPane.setTop(inputText);
         startingPane.setLeft(nextViewButton);
         startingPane.setRight(dataBaseEdit);
-        
+
         //1.3 make the scene
         Scene startingScene = new Scene(startingPane, 460, 100);
-        
-        
+
         //2. database edit view
         //2.1 make elements
         TextField dbInputField = new TextField();
@@ -47,23 +54,47 @@ public class RatkaisijaUI extends Application {
         Button addButton = new Button("Lisää sana");
         Button delButton = new Button("Poista sana");
         Button resetButton = new Button("Palauta tietokanta");
-        
+        Button backButton = new Button("Takaisin");
+        Button backButton2 = new Button("Takaisin");
+
         //2.2 make pane and add elements
         BorderPane dbEditPane = new BorderPane();
-        
+        HBox pane2 = new HBox();
+
+        dbEditPane.setBottom(pane2);
+        pane2.setAlignment(Pos.CENTER);
+
         dbEditPane.setTop(message);
-        dbEditPane.setLeft(addButton);
-        dbEditPane.setCenter(delButton);
-        dbEditPane.setRight(resetButton);
-        dbEditPane.setBottom(dbInputField);
-        
+        dbEditPane.setCenter(dbInputField);
+
+        pane2.getChildren().add(addButton);
+        pane2.getChildren().add(delButton);
+        pane2.getChildren().add(resetButton);
+        pane2.getChildren().add(backButton);
+
         //2.3 make the scene
         Scene dbEditScene = new Scene(dbEditPane, 460, 100);
-        
-        
-        //3. buttons
-        //3.1 starting view buttons
-        //3.1.1 nextview button
+
+        //3. Make solver screen
+        BorderPane solverPane = new BorderPane();
+        GridPane charGrid = new GridPane();
+        solverPane.setLeft(charGrid);
+
+        //3.1 setup the grid
+        charGrid.setHgap(20);
+        charGrid.setVgap(20);
+        charGrid.setPadding(new Insets(10, 75, 10, 10));
+        //see 4.1.1
+
+        //3.2 make and add elements
+        solverPane.setBottom(backButton2);
+
+        //3.3 make the scene
+        Scene solverScene = new Scene(solverPane, 460, 600);
+
+        //4. buttons
+        //4.1 starting view buttons
+        //4.1.1 nextview button
         nextViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -71,24 +102,40 @@ public class RatkaisijaUI extends Application {
                 if (validInput) {
                     //TODO: suorita sananetsintäalgoritmi, do blackmagic
                     a.setInput(inputText.getText());
-                    System.out.println("TODO");
-                }
-                else {
+                    char[][] grid = a.getGrid();
+
+                    //drawing the charGrid
+                    charGrid.getChildren().clear();
+                    for (int i = 1; i <= 4; i++) {
+                        for (int j = 1; j <= 4; j++) {
+                            Label character = new Label(String.valueOf(grid[i][j]));
+                            character.setFont(new Font("Arial", 40));
+                            charGrid.add(character, j, i);
+                        }
+                    }
+
+                    ObservableList<String> words = FXCollections.observableArrayList(a.getList());
+                    ListView<String> list = new ListView<>(words);
+
+                    solverPane.setCenter(list);
+
+                    view.setScene(solverScene);
+                } else {
                     inputText.setText("Väärä syötteen pituus!");
                 }
             }
         });
-        
-        //3.1.2 dataBaseEdit button
+
+        //4.1.2 dataBaseEdit button
         dataBaseEdit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 view.setScene(dbEditScene);
             }
         });
-        
-        //3.2 Database edit view buttons
-        //3.2.1 addButton
+
+        //4.2 Database edit view buttons
+        //4.2.1 addButton
         addButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -99,8 +146,8 @@ public class RatkaisijaUI extends Application {
                 }
             }
         });
-        
-        //3.2.2 delButton
+
+        //4.2.2 delButton
         delButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -111,8 +158,8 @@ public class RatkaisijaUI extends Application {
                 }
             }
         });
-        
-        //3.2.3 resetButton
+
+        //4.2.3 resetButton
         resetButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -124,7 +171,23 @@ public class RatkaisijaUI extends Application {
             }
         });
 
-        //4. set the starting scene
+        //4.2.4 backButton
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                view.setScene(startingScene);
+            }
+        });
+        
+        //4.2.4 backButton2
+        backButton2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                view.setScene(startingScene);
+            }
+        });
+
+        //5. set the starting scene
         view.setScene(startingScene);
         view.show();
     }

@@ -11,6 +11,8 @@ import java.util.Scanner;
  * @author tino
  */
 public class WordScanner {
+    
+    File privateWordList;
 
     public WordScanner() {
         setup();
@@ -19,8 +21,7 @@ public class WordScanner {
     //Creates user's own database of finnish words the first time the program is executed
     //(or if the database file 'PrivateWordList.txt' somehow gets deleted
     private void setup() {
-        File privateWordList = new File("PrivateWordList.txt");
-        System.out.println("Wordscanner setup debug sout: " + privateWordList.exists());
+        privateWordList = new File("PrivateWordList.txt");
         if (!privateWordList.exists()) {
             //create PrivateWordList.txt
             reset();
@@ -66,6 +67,10 @@ public class WordScanner {
 
         return list;
     }
+    
+    public ArrayList<String> returnWords() {
+        return getWords(privateWordList);
+    }
 
     public boolean checkWord(String word) {
         //method checks if a given word exists in the database
@@ -101,7 +106,7 @@ public class WordScanner {
     }
 
     public void delWord(String word) {
-        File privateWordList = new File("PrivateWordList.txt");
+        privateWordList = new File("PrivateWordList.txt");
         ArrayList<String> newList = getWords(privateWordList);
         newList.remove(word);
         copyWords(newList, privateWordList);
