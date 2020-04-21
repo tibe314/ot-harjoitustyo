@@ -51,3 +51,7 @@ Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon.
 ### 14.4.2020
 
 Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käyttäjälle oman sanatietokannan, jota on mahdollista muokata lisäämällä ja poistamalla sanoja. Tietokannan voi myös palauttaa alkuperäiseen muotoon.
+
+### 21.4.2020
+
+Oikean pituisen syötteen saatuaan ohjelma näyttää muodostetun kirjainruudukon, ja toistaiseksi näyttää kaikki sanat jotka kirjaimista on mahdollista muodostaa polusta riippumatta.
