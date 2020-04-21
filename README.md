@@ -11,6 +11,9 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+## Releaset
+- [Viikko 5](https://github.com/tibe314/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 Sovelluksen voi ajaa komentoriviltä komennolla
 ```
@@ -33,8 +36,18 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 Ja raportin voi tarkistaa avaamalla selaimessa _target/site/checkstyle.html_
 
+### Jar-tiedoston luominen
+Jar-tiedoston luonti tapahtuu komennolla
+```
+mvn package
+```
+
 ## Tämänhetkinen toiminnallisuus
 
 ### 31.3.2020
 
 Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon. Nappia painamalla ohjelma tarkistaa onko käyttäjän syöte oikean mittainen (eli onko siinä 16 merkkiä).
+
+### 14.4.2020
+
+Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käyttäjälle oman sanatietokannan, jota on mahdollista muokata lisäämällä ja poistamalla sanoja. Tietokannan voi myös palauttaa alkuperäiseen muotoon.
