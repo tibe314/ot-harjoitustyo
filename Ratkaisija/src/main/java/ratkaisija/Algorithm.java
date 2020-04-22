@@ -2,6 +2,8 @@
 package ratkaisija;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 public class Algorithm {
@@ -53,7 +55,7 @@ public class Algorithm {
         }
         ArrayList<String> list = findPotentialWords();
         ArrayList<String> flist = findWords(list);
-        return list;
+        return flist;
     }
     
     private ArrayList<String> findPotentialWords() {
@@ -85,59 +87,65 @@ public class Algorithm {
                     if (grid[i][j] == first) {
                         int[][] map = new int[6][6];
                         int k = 1;
-                        System.out.println("Sanan "+s+" ensimmäinen kirjain löytyi koordinaatista "+i+";"+j);
-                        findNextLetter(map, s, k, i, j);
+                        findNextLetter(map, s, k, i, j, words);
                     }
                 }
             }
         }
-        
+        Collections.sort(words, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o2.length() - o1.length();
+            }
+        });
         return words;
     }
     
-    private void findNextLetter(int[][] map, String s, int k, int x, int y) {
-        if (k == s.length()) return;
-        System.out.println("etsitään kirjainta "+s.charAt(k));
+    private void findNextLetter(int[][] map, String s, int k, int x, int y, ArrayList<String> words) {
+        if (k == s.length()) {
+            if (!words.contains(s)) words.add(s);
+            return;
+        }
+
         map[x][y] = 1;
         //left up
-        if (grid[x-1][y-1] == s.charAt(k)) {
-            System.out.println("vasen ylös "+(x-1)+";"+(y-1));
+        if (grid[x-1][y-1] == s.charAt(k) && map[x-1][y-1] != 1) {
+            findNextLetter(map, s, k+1, x-1, y-1, words);
         }
         
         //same up
-        if (grid[x][y-1] == s.charAt(k)) {
-            System.out.println("sama ylös "+(x)+";"+(y-1));
+        if (grid[x][y-1] == s.charAt(k) && map[x][y-1] != 1) {
+            findNextLetter(map, s, k+1, x, y-1, words);
         }
         
         //right up
-        if (grid[x+1][y-1] == s.charAt(k)) {
-            System.out.println("oikea ylös "+(x+1)+";"+(y-1));
+        if (grid[x+1][y-1] == s.charAt(k) && map[x+1][y-1] != 1) {
+            findNextLetter(map, s, k+1, x+1, y-1, words);
         }
         
         //same left
-        if (grid[x-1][y] == s.charAt(k)) {
-            System.out.println("sama vasen "+(x-1)+";"+(y));
+        if (grid[x-1][y] == s.charAt(k) && map[x-1][y] != 1) {
+            findNextLetter(map, s, k+1, x-1, y, words);
         }
         
         //same right
-        if (grid[x+1][y] == s.charAt(k)) {
-            System.out.println("sama oikea "+(x+1)+";"+(y));
-            findNextLetter(map, s, k+1, x+1, y);
+        if (grid[x+1][y] == s.charAt(k) && map[x+1][y] != 1) {
+            findNextLetter(map, s, k+1, x+1, y, words);
         }
         
         //down left
-        if (grid[x-1][y+1] == s.charAt(k)) {
-            System.out.println("alas vasen "+(x-1)+";"+(y+1));
+        if (grid[x-1][y+1] == s.charAt(k) && map[x-1][y+1] != 1) {
+            findNextLetter(map, s, k+1, x-1, y+1, words);
         }
         
         //same down
-        if (grid[x][y+1] == s.charAt(k)) {
-            System.out.println("alas sama "+(x)+";"+(y+1));
+        if (grid[x][y+1] == s.charAt(k) && map[x][y+1] != 1) {
+            findNextLetter(map, s, k+1, x, y+1, words);
         }
         
         //down right
-        if (grid[x+1][y+1] == s.charAt(k)) {
-            System.out.println("alas oikea "+(x+1)+";"+(y+1));
+        if (grid[x+1][y+1] == s.charAt(k) && map[x+1][y+1] != 1) {
+            findNextLetter(map, s, k+1, x+1, y+1, words);
         }
         
         map[x][y] = 0;
