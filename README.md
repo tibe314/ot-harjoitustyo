@@ -55,3 +55,7 @@ Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käy
 ### 21.4.2020
 
 Oikean pituisen syötteen saatuaan ohjelma näyttää muodostetun kirjainruudukon, ja toistaiseksi näyttää kaikki sanat jotka kirjaimista on mahdollista muodostaa polusta riippumatta.
+
+### 22.4.2020
+
+Ohjelma toimii näennäisesti kuin vaatimusmäärittelyssä, sananetsintäalgoritmi toimii kuten kuuluukin jos sanajahdin useasta ykkössijasta on mitään pääteltävissä.
