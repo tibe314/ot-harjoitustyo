@@ -18,11 +18,11 @@ kirjainruudukossa sanojen reitit.
 
 ## Perustoiminnallisuus
 
-- Sovellukselle on mahdollista syöttää näppäimistöltä kirjainruudukko, jonka jälkeen sovellus jonkinlaista
-polunetsintäalgoritmia käyttäen löytää kaikki sanat mitä sovellus sanatietokannassaan sisältää.
+- ~Sovellukselle on mahdollista syöttää näppäimistöltä kirjainruudukko, jonka jälkeen sovellus jonkinlaista
+polunetsintäalgoritmia käyttäen löytää kaikki sanat mitä sovellus sanatietokannassaan sisältää.~ **TEHTY**
 - ~Sovellukseen on mahdollista lisätä ja poistaa sanoja~ **TEHTY**
 - ~Sovelluksen sanatietokannan voi "palauttaa tehdasasetuksiin"~ **TEHTY**
-- Käyttäjä voi syöttää uuden kirjainruudukon uudelleenkäynnistämättä sovellusta
+- ~Käyttäjä voi syöttää uuden kirjainruudukon uudelleenkäynnistämättä sovellusta~ **TEHTY**
 
 ## Jatkokehitysideoita
 
