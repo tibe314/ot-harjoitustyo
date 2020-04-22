@@ -96,6 +96,7 @@ public class Algorithm {
     }
     
     private void findNextLetter(int[][] map, String s, int k, int x, int y) {
+        if (k == s.length()) return;
         System.out.println("etsitään kirjainta "+s.charAt(k));
         map[x][y] = 1;
         //left up
