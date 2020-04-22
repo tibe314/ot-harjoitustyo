@@ -34,4 +34,5 @@ Polunetsintävaihe toimii monella ehdolla:
 - Merkataan nykyinen solmu käsittelemättömäksi, ja palataan.
 
 ![Animaatio2](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmianimaatio2.gif)
-(Hieman parempi animaatio polunetsintäalgoritmista)
+
+(Hieman parempi animaatio jossa polunetsintäalgoritmi yrittää etsiä verkosta sanaa 'ohjelmointi')
