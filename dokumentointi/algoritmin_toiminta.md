@@ -21,7 +21,7 @@ Sanan löytymiselle on kaksi sääntöä, A. sanan alku- ja loppupisteellä ei o
 
 Käsiteltävää taulukkoa voi ajatella verkkona, jonka jokainen kirjain on oma solmunsa, ja jokainen solmu sisältää 8 yhteyttä viereisiin solmuihin.
 
-Polunetsintävaihe toimii monella ehdolla:
+Koodi on käytännössä syvyyshaku, mutta tässä koodin vaiheet tarkemmin:
 
 - Jos solmun kirjain on etsittävän sanan viimeinen kirjain, hurraa! Sana löytyi, sana lisätään *löytyneiden sanojen listaan* ja palataan.
 
@@ -32,6 +32,8 @@ Polunetsintävaihe toimii monella ehdolla:
     - Jos solmun kirjain ei ole etsittävä, tai solmu on jo käsiteltävänä, siirrytään seuraavaan solmuun.
     
 - Merkataan nykyinen solmu käsittelemättömäksi, ja palataan.
+
+Algoritmi on aikavaativuudeltaan vaikka mitä
 
 ![Animaatio2](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmianimaatio2.gif)
 
