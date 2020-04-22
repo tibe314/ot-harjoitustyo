@@ -13,5 +13,6 @@
 | 13.4  | 5    | Koodausta jatkettu |
 | 14.4  | 6    | Koodausta jatkettu, checkstyle lisätty, muita virheitä korjattu, jar:n generointi yms muut ominaisuudet |
 | 21.4  | 6    | JavaFX-ulkoasua siistitty, sananetsintäalgoritmin koodaus aloitettu |
+| 22.4  | 8    | Sananetsintäalgoritmi saatu valmiiksi, perustoiminnallisuus saavutettu |
 
-Yhteensä 43
+Yhteensä 51
