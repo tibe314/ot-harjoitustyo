@@ -33,7 +33,7 @@ Koodi on käytännössä syvyyshaku, mutta tässä koodin vaiheet tarkemmin:
     
 - Merkataan nykyinen solmu käsittelemättömäksi, ja palataan.
 
-Algoritmi on aikavaativuudeltaan vaikka mitä
+
 
 ![Animaatio2](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmianimaatio2.gif)
 
