@@ -12,5 +12,6 @@
 | 12.4  | 2    | Tietokannan muokkauksen toiminnallisuuden koodaus aloitettu |
 | 13.4  | 5    | Koodausta jatkettu |
 | 14.4  | 6    | Koodausta jatkettu, checkstyle lisätty, muita virheitä korjattu, jar:n generointi yms muut ominaisuudet |
+| 21.4  | 6    | JavaFX-ulkoasua siistitty, sananetsintäalgoritmin koodaus aloitettu |
 
-Yhteensä 37
+Yhteensä 43

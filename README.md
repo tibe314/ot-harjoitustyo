@@ -4,7 +4,7 @@ Sovelluksen avulla käyttäjän on mahdollista ratkaista [Sanajahti](https://fi.
 
 Sovelluksen tarkoitus on olla osa Helsingin Yliopiston *Ohjelmistotekniikka*-kurssin suoritusta.
 
-Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetään käyttäjän oman sanalistatietokannan alustamiseen (ja tulevaisuudessa sen päivittämiseen). Ensimmäisen ajokerran yhteydessä ohjelma luo oman tietokantatiedoston (jonka sisältö oletuksena on kopio alkuperäisestä).
+Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetään käyttäjän oman sanalistatietokannan alustamiseen ja päivittämiseen. Ensimmäisen ajokerran yhteydessä ohjelma luo oman tietokantatiedoston (jonka sisältö oletuksena on kopio alkuperäisestä).
 
 ## Dokumentointi
 - [Vaatimusmäärittely](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
@@ -51,3 +51,7 @@ Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon.
 ### 14.4.2020
 
 Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käyttäjälle oman sanatietokannan, jota on mahdollista muokata lisäämällä ja poistamalla sanoja. Tietokannan voi myös palauttaa alkuperäiseen muotoon.
+
+### 21.4.2020
+
+Oikean pituisen syötteen saatuaan ohjelma näyttää muodostetun kirjainruudukon, ja toistaiseksi näyttää kaikki sanat jotka kirjaimista on mahdollista muodostaa polusta riippumatta.
