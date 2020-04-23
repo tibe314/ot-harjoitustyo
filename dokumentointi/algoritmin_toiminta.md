@@ -23,7 +23,7 @@ Käsiteltävää taulukkoa voi ajatella verkkona, jonka jokainen kirjain on oma 
 
 Koodi on käytännössä syvyyshaku, mutta tässä koodin vaiheet tarkemmin:
 
-- Jos solmun kirjain on etsittävän sanan viimeinen kirjain, hurraa! Sana löytyi, sana lisätään *löytyneiden sanojen listaan* ja palataan.
+- Jos solmun kirjain on etsittävän sanan viimeinen kirjain, hurraa! Sana löytyi, sana lisätään *löytyneiden sanojen listaan* ja palataan (huomattakoon että viimeisestä kirjaimesta pidetään kirjaa indeksillä eikä niinkään viimeisellä kirjaimella, esimerkiksi sanassa ohjelmo<ins>**i**</ins>nt<ins>**i**</ins> sanan keskellä oleva kirjain voi myös olla sanan viimeinen kirjain).
 
 - Merkataan nykyinen solmu käsiteltäväksi.
 
