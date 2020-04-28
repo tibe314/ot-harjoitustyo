@@ -3,8 +3,10 @@ package ratkaisija;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -117,5 +119,33 @@ public class RatkaisijaTest {
     @Test
     public void databaseHandlerReturnsFalseWhenDeletingNonexistentWord() {
         assertFalse(dbh.delWord("asdasdasdasd", testfile));
+    }
+    
+    @Test
+    public void algorithmSetsGrid() {
+        a.setInput("ohjrkojeiioentlm");
+        char[][] testGrid = { // /0 is null character
+            {'\0','\0','\0','\0','\0','\0'},
+            {'\0','o','h','j','r','\0'},
+            {'\0','k','o','j','e','\0'},
+            {'\0','i','i','o','e','\0'},
+            {'\0','n','t','l','m','\0'},
+            {'\0','\0','\0','\0','\0','\0'}
+        };
+        Assert.assertArrayEquals(a.getGrid(), testGrid);
+    }
+    
+    @Test
+    public void algorithmFindsWords() {
+        a.setInput("ohjrkojeiioentlm");
+        ArrayList<String> list = a.getList();
+        assertTrue(list.contains("ohjelmointi"));
+    }
+    
+    @Test
+    public void algorithmDoesntFindWords() {
+        a.setInput("ohjrkojeiioentlm");
+        ArrayList<String> list = a.getList();
+        assertFalse(list.contains("onkiliero"));
     }
 }

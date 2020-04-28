@@ -7,43 +7,45 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
- * @author tino
+ * Handles actually editing the database.
  */
 public class WordScanner {
     
     File privateWordList;
 
+    /**
+     * Initializes WordScanner. Calls a setup method that creates PrivateWordList.txt if it doesn't already exist.
+     */
     public WordScanner() {
         setup();
     }
 
-    //Creates user's own database of finnish words the first time the program is executed
-    //(or if the database file 'PrivateWordList.txt' somehow gets deleted
     private void setup() {
         privateWordList = new File("PrivateWordList.txt");
         if (!privateWordList.exists()) {
-            //create PrivateWordList.txt
             reset();
         }
-        //if the file exists, nothing is done
     }
+    
 
+    /**
+     * Deletes PrivateWordList, then re-creates it and copies all words from FinnishWordList to it.
+     * @return Returns true if nothing goes wrong.
+     */
     public boolean reset() {
-        File privateWordList = new File("PrivateWordList.txt");
+        privateWordList = new File("PrivateWordList.txt");
         privateWordList.delete();
         try {
             privateWordList.createNewFile();
         } catch (IOException e) {
-            e.printStackTrace();
+            return false;
         }
         ArrayList<String> tempList = getWords(new File("WordListFinnish.txt"));
-        copyWords(tempList, privateWordList);
-        return true;
+        return copyWords(tempList, privateWordList);
 
     }
 
-    private void copyWords(ArrayList<String> words, File targetFile) {
+    private boolean copyWords(ArrayList<String> words, File targetFile) {
         try {
             FileWriter writer = new FileWriter(targetFile);
             for (String s : words) {
@@ -51,8 +53,9 @@ public class WordScanner {
             }
             writer.close();
         } catch (IOException e) {
-            System.out.println("Virhe tapahtui: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
     private ArrayList<String> getWords(File file) {
@@ -62,49 +65,81 @@ public class WordScanner {
                 list.add(wordScanner.nextLine());
             }
         } catch (Exception e) {
-            System.out.println("Virhe tapahtui: " + e.getMessage());
+            return new ArrayList<>();
         }
 
         return list;
     }
     
+    /**
+     * Returns database content as an ArrayList.
+     * @return Database as a list.
+     */
     public ArrayList<String> returnWords() {
         return getWords(privateWordList);
     }
 
+    /**
+     * Method checks if a given word exists in the database.
+     * @param word being checked.
+     * @return True if the file contains the word, False otherwise.
+     */
     public boolean checkWord(String word) {
-        //method checks if a given word exists in the database
-        File privateWordList = new File("PrivateWordList.txt");
+        privateWordList = new File("PrivateWordList.txt");
         ArrayList<String> words = getWords(privateWordList);
         return words.contains(word);
     }
 
+    /**
+     * Method checks if a given word exists in a file. Exists for testing purposes and for future features.
+     * @param word being checked.
+     * @param file being checked.
+     * @return True if the file contains the word, False otherwise.
+     */
     public boolean checkWord(String word, File file) {
         ArrayList<String> words = getWords(file);
         return words.contains(word);
     }
 
-    public void addWord(String word) {
-        File privateWordList = new File("PrivateWordList.txt");
+
+    /**
+     * Adds a word to the database.
+     * @param word that gets added.
+     * @return True if everything works.
+     */
+    public boolean addWord(String word) {
+        privateWordList = new File("PrivateWordList.txt");
         try {
             FileWriter writer = new FileWriter(privateWordList, true);
             writer.write(word + "\n");
             writer.close();
         } catch (IOException e) {
-            System.out.println("Virhe tapahtui: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
-    public void addWord(String word, File file) {
+    /**
+     * Adds a word to a given file. Exists for testing and for future features.
+     * @param word that gets added.
+     * @param file that the word gets added to.
+     * @return True if everything works.
+     */
+    public boolean addWord(String word, File file) {
         try {
             FileWriter writer = new FileWriter(file, true);
             writer.write(word + "\n");
             writer.close();
         } catch (IOException e) {
-            System.out.println("Virhe tapahtui: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
+    /**
+     * Deletes a word from the database.
+     * @param word that gets deleted.
+     */
     public void delWord(String word) {
         privateWordList = new File("PrivateWordList.txt");
         ArrayList<String> newList = getWords(privateWordList);
@@ -112,6 +147,11 @@ public class WordScanner {
         copyWords(newList, privateWordList);
     }
 
+    /**
+     * Deleted a word from a given file. Exists for testing and for future features.
+     * @param word that gets deleted.
+     * @param file that the word gets deleted from.
+     */
     public void delWord(String word, File file) {
         ArrayList<String> newList = getWords(file);
         newList.remove(word);
