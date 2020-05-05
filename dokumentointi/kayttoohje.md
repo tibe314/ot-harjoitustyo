@@ -22,6 +22,7 @@ TODO
 Sanajahti on mobiilipeli jossa pelaajan tarkoitus on aikarajan sisällä löytää mahdollisimman monta sanaa pelin antamasta 4\*4-kirjainruudukosta. Sana täytyy voida muodostaa piirtämällä reitti kirjaimesta kirjaimeen kulkien vinottain tai pysty- ja vaakasuoraan. Samaa ruutua ei saa käyttää samassa sanassa kuin kerran.
 
 ![Esimerkkiruudukko](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kuvat/esimerkkiruudukko.png)
+
 (esimerkki miltä pelin ruudukko näyttää. mahdollisista tekijänoikeussyistä kuva tehty itse)
 
 ### Sanaruudukon syöttäminen
