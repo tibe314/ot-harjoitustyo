@@ -7,6 +7,7 @@ Sovelluksen tarkoitus on olla osa Helsingin Yliopiston *Ohjelmistotekniikka*-kur
 Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetään käyttäjän oman sanalistatietokannan alustamiseen ja päivittämiseen. Ensimmäisen ajokerran yhteydessä ohjelma luo oman tietokantatiedoston (jonka sisältö oletuksena on kopio alkuperäisestä).
 
 ## Dokumentointi
+- [Käyttöohje](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
 - [Vaatimusmäärittely](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
