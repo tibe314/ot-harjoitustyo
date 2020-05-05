@@ -27,4 +27,12 @@ Sanajahti on mobiilipeli jossa pelaajan tarkoitus on aikarajan sisällä löytä
 
 ### Sanaruudukon syöttäminen
 
-Sovellus aukeaa ruudukonsyöttönäkymään
+Sovellus aukeaa ruudukonsyöttönäkymään:
+
+**KUVA ALKUNÄKYMÄSTÄ**
+
+Syötekenttään kirjoitetaan yhtenä pötkönä kirjainruudukko ilman välimerkkejä, esim. ylempänä olevan esimerkkiruudukon sisältö syötettäisiin:
+```
+tenoudnikomtnvol
+```
+Kirjainten koolla ei ole väliä.
