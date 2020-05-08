@@ -6,7 +6,7 @@ Koska algoritmi jota ohjelma käyttää sanojen etsintään ruudukossa on varsin
 
 Ensimmäisessä vaiheessa algoritmi ottaa käyttäjän syötteen ja tekee siitä listan char-alkioita. Sen jälkeen ohjelma yksitellen käy läpi koko sanalistan sana sanalta. Kun yksittäinen sana otetaan käsittelyyn, ohjelma kirjain kirjaimelta tarkistaa löytyykö kirjain käyttäjän syöttämästä kirjainlistasta, ja jos on, kirjain poistetaan. Tätä jatketaan kunnes sanan kaikki kirjaimet on käyty läpi, jolloin sana lisätään *potentiaalisten sanojen listaan*, tai jos tarkistettavaa kirjainta ei (enää) löydy kirjainlistalta, sana hylätään. Tämä vaihe on tarpeellinen, koska kotimaisten kielten keskuksen [nykysuomen sanalista](http://kaino.kotus.fi/sanat/nykysuomi/) sisältää yhteensä 91&nbsp;110 sanaa. Algoritmin tämän vaiheen aikavaativuus on O(n) ja saatu lista potentiaalisia sanoja on usein noin sadan luokkaa, eli tämä vaihe nopeuttaa huomattavasti ohjelman toimintaa sillä seuraavaksi käytettävä polunetsintäalgoritmi on huomattavasti raskaampi.
 
-<img src="https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmianimaatio1.gif" width="400" height="125">
+<img src="https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kuvaat/algoritmianimaatio1.gif" width="400" height="125">
 (Kämäinen animaatio ykkösvaiheen algoritmista)
 
 ## Vaihe 2
@@ -35,6 +35,6 @@ Koodi on käytännössä syvyyshaku, mutta tässä koodin vaiheet tarkemmin:
 
 
 
-![Animaatio2](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmianimaatio2.gif)
+![Animaatio2](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kuvat/algoritmianimaatio2.gif)
 
 (Hieman parempi animaatio jossa polunetsintäalgoritmi yrittää etsiä verkosta sanaa 'ohjelmointi')
