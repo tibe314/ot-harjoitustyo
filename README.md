@@ -12,6 +12,7 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 - [Työaikakirjanpito](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 - [Algoritmin toiminta](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/algoritmin_toiminta.md)
+- [Testausdokumentti](https://github.com/tibe314/Sanajahtiratkaisija/blob/master/dokumentointi/testaus.md)
 
 ## Releaset
 - [Viikko 5](https://github.com/tibe314/ot-harjoitustyo/releases/tag/viikko5)
