@@ -1,6 +1,9 @@
 
 package ratkaisija;
 
+import ratkaisija.datahandling.WordScanner;
+import ratkaisija.datahandling.DatabaseHandler;
+import ratkaisija.solver.Algorithm;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -58,18 +61,18 @@ public class RatkaisijaTest {
     
     @Test
     public void algorithmRecognizesIncorrectInputs() {
-        assertEquals(false, a.checkInputLenght("this should be false"));
+        assertEquals(false, a.checkInputLength("this should be false"));
     }
     
     @Test
     public void algorithmRecognizesCorrectInputs() {
-        assertEquals(true, a.checkInputLenght("aaaaaaaaaaaaaaaa")); //16 a's -> true
+        assertEquals(true, a.checkInputLength("aaaaaaaaaaaaaaaa")); //16 a's -> true
     }
     
     @Test
     public void algorithmSetsInputCorrectly() {
         String testString = "kuustoistacharia";
-        if (a.checkInputLenght(testString)) { //check if test input is of correct lenght (it is), pretty redundant given
+        if (a.checkInputLength(testString)) { //check if test input is of correct lenght (it is), pretty redundant given
             a.setInput(testString);           //test no. 2 but eh
         }
         assertEquals(testString, a.getInput());

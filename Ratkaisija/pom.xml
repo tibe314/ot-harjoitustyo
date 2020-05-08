@@ -40,8 +40,7 @@
                 <version>0.8.3</version>
                 <configuration>
                     <excludes>
-                        <exclude>ratkaisija/RatkaisijaUI</exclude>
-                        <exclude>ratkaisija/RatkaisijaUI/*</exclude>
+                        <exclude>ratkaisija/UI/**/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

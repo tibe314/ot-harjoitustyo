@@ -1,8 +1,9 @@
-package ratkaisija;
+package ratkaisija.solver;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import ratkaisija.datahandling.WordScanner;
 
 /**
  * Class handles finding words in a given 2d char-array.
@@ -28,7 +29,7 @@ public class Algorithm {
      *
      * @return True if length is 16
      */
-    public boolean checkInputLenght(String userInput) {
+    public boolean checkInputLength(String userInput) {
         return userInput.length() == 16;
     }
 

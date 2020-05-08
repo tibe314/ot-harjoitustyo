@@ -1,4 +1,4 @@
-package ratkaisija;
+package ratkaisija.UI;
 
 /**
  *
@@ -22,6 +22,10 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import javafx.scene.text.Font;
+import ratkaisija.solver.Algorithm;
+import ratkaisija.solver.Algorithm;
+import ratkaisija.datahandling.DatabaseHandler;
+import ratkaisija.datahandling.DatabaseHandler;
 
 public class RatkaisijaUI extends Application {
 
@@ -98,7 +102,7 @@ public class RatkaisijaUI extends Application {
         nextViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                boolean validInput = a.checkInputLenght(inputText.getText());
+                boolean validInput = a.checkInputLength(inputText.getText());
                 if (validInput) {
                     //TODO: suorita sananetsintäalgoritmi, do blackmagic
                     a.setInput(inputText.getText());

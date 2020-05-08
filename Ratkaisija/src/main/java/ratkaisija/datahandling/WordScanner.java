@@ -1,4 +1,4 @@
-package ratkaisija;
+package ratkaisija.datahandling;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,6 +1,8 @@
 
 package ratkaisija;
 
+import ratkaisija.UI.RatkaisijaUI;
+
 /**
  * Main class.
  */
