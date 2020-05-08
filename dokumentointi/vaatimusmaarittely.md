@@ -11,7 +11,7 @@ on myös mahdollista poistaa ja lisätä sanoja sovelluksen tietokantaan, sillä
 
 ## Käyttöliittymäluonnos
 
-![käyttöliittymäluonnos](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kayttoliittymaluonnos.jpg)
+![käyttöliittymäluonnos](https://github.com/tibe314/ot-harjoitustyo/blob/master/dokumentointi/kuvat/kayttoliittymaluonnos.jpg)
 Luonnos sovelluksen ideaalista päänäkymästä. Käyttäjä näkee listan mahdollisista sanoista, ja joko käyttöliittymän 
 painikkeilla tai näppäimistöä käyttäen olisi mahdollista näyttää ensin käyttäjän antamassa ja sitten sovelluksen piirtämässä
 kirjainruudukossa sanojen reitit.
