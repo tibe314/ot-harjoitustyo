@@ -23,8 +23,6 @@ import javafx.stage.Stage;
 
 import javafx.scene.text.Font;
 import ratkaisija.solver.Algorithm;
-import ratkaisija.solver.Algorithm;
-import ratkaisija.datahandling.DatabaseHandler;
 import ratkaisija.datahandling.DatabaseHandler;
 
 public class RatkaisijaUI extends Application {

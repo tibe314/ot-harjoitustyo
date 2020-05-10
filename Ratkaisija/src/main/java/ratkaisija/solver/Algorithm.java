@@ -35,6 +35,7 @@ public class Algorithm {
 
     /**
      * Sets algorithm's input to given string.
+     *
      * @param s String
      */
     public void setInput(String s) {
@@ -58,10 +59,11 @@ public class Algorithm {
     }
 
     /**
-     * Returns set input as a 6*6 2d char-array. The 4*4 character array is surrounded by empty characters.
-     * 
+     * Returns set input as a 6*6 2d char-array. The 4*4 character array is
+     * surrounded by empty characters.
+     *
      * @return char[][] grid
-     * 
+     *
      */
     public char[][] getGrid() {
         return grid;
@@ -69,7 +71,7 @@ public class Algorithm {
 
     /**
      * Returns input.
-     * 
+     *
      * @return String
      */
     public String getInput() {
@@ -78,7 +80,7 @@ public class Algorithm {
 
     /**
      * Returns list.
-     * 
+     *
      * @return Returns ArrayList.
      */
     public ArrayList<String> getList() {
@@ -119,6 +121,8 @@ public class Algorithm {
                         int[][] map = new int[6][6];
                         int k = 1;
                         findNextLetter(map, s, k, i, j, words);
+                        //map is bool 2d array of active chars, s is word being searched, k is index of the letter being searched (here always 1)
+                        //i and j are coordinates
                     }
                 }
             }
