@@ -28,6 +28,8 @@ Kun *RatkaisijaUI*:lle on annettu oikean mittainen syöte, vastaanottaa [solver.
 
 ### Tietokannan muokkaaminen
 
-Tietokannan muokkausnäkymästä on mahdollista 
+Tietokannan muokkausnäkymästä on mahdollista lisätä ja poistaa sanoja. Sanaa lisätessä ohjelma etenee seuraavasti:
+
+![sanan lisäämiskuva](https://github.com/tibe314/Sanajahtiratkaisija/blob/master/dokumentointi/kuvat/sanan_lisays.png)
 
 
