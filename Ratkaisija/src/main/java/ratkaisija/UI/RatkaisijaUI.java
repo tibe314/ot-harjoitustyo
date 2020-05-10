@@ -102,7 +102,6 @@ public class RatkaisijaUI extends Application {
             public void handle(ActionEvent event) {
                 boolean validInput = a.checkInputLength(inputText.getText());
                 if (validInput) {
-                    //TODO: suorita sananetsintäalgoritmi, do blackmagic
                     a.setInput(inputText.getText());
                     char[][] grid = a.getGrid();
 

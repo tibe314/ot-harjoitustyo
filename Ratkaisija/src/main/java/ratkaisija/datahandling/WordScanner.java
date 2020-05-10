@@ -140,19 +140,6 @@ public class WordScanner {
     }
 
     /**
-     * Method checks if a given word exists in a file. Exists for testing
-     * purposes and for future features.
-     *
-     * @param word being checked.
-     * @param file being checked.
-     * @return True if the file contains the word, False otherwise.
-     */
-    public boolean checkWord(String word, File file) {
-        ArrayList<String> words = getWords(file);
-        return words.contains(word);
-    }
-
-    /**
      * Adds a word to the database.
      *
      * @param word that gets added.
