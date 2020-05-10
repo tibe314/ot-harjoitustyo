@@ -15,6 +15,7 @@ Ohjelma sisältää tarkoituksella FinnishWordList.txt -tiedoston jota käytetä
 - [Testausdokumentti](https://github.com/tibe314/Sanajahtiratkaisija/blob/master/dokumentointi/testaus.md)
 
 ## Releaset
+- [Loppupalautus (v1.0)](https://github.com/tibe314/Sanajahtiratkaisija/releases/tag/v1.0)
 - [Viikko 5](https://github.com/tibe314/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Komentorivitoiminnot
@@ -44,21 +45,3 @@ Jar-tiedoston luonti tapahtuu komennolla
 ```
 mvn package
 ```
-
-## Tämänhetkinen toiminnallisuus
-
-### 31.3.2020
-
-Ohjelman voi ajaa, käyttäjä voi syöttää ohjelmalle haluamansa merkkijonon. Nappia painamalla ohjelma tarkistaa onko käyttäjän syöte oikean mittainen (eli onko siinä 16 merkkiä).
-
-### 14.4.2020
-
-Ohjelma ensimmäisellä käynnistyskerralla (tai sen muuten puuttuessa) luo käyttäjälle oman sanatietokannan, jota on mahdollista muokata lisäämällä ja poistamalla sanoja. Tietokannan voi myös palauttaa alkuperäiseen muotoon.
-
-### 21.4.2020
-
-Oikean pituisen syötteen saatuaan ohjelma näyttää muodostetun kirjainruudukon, ja toistaiseksi näyttää kaikki sanat jotka kirjaimista on mahdollista muodostaa polusta riippumatta.
-
-### 22.4.2020
-
-Ohjelma toimii näennäisesti kuin vaatimusmäärittelyssä, sananetsintäalgoritmi toimii kuten kuuluukin jos sanajahdin useasta ykkössijasta on mitään pääteltävissä.
