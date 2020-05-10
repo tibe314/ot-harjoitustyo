@@ -45,3 +45,7 @@ Jar-tiedoston luonti tapahtuu komennolla
 ```
 mvn package
 ```
+Suoritettava Ratkaisija-1.0-SNAPSHOT.jar -tiedosto löytyy target kansiosta, ja sen voi ajaa komennolla
+```
+java -jar Ratkaisija-1.0-SNAPSHOT.jar
+```
