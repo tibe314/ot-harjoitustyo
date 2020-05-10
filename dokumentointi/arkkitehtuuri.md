@@ -32,4 +32,4 @@ Tietokannan muokkausnäkymästä on mahdollista lisätä ja poistaa sanoja. Sana
 
 ![sanan lisäämiskuva](https://github.com/tibe314/Sanajahtiratkaisija/blob/master/dokumentointi/kuvat/sanan_lisays.png)
 
-
+DatabaseHandler (lyhennetty DBH) siis tarkistaa löytyykö lisättävää sanaa jo tietokannasta, ja sen mukaan joko kutsuu WordScannerin oikeasti sanaa lisäävää metodia addWord(String). Esimerkissä tietokannasta ei alkuun löydy sanaa "sana" ja se yritetään lisätä sinne kahdesti.
