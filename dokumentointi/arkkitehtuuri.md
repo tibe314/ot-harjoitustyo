@@ -33,3 +33,13 @@ Tietokannan muokkausnäkymästä on mahdollista lisätä ja poistaa sanoja. Sana
 ![sanan lisäämiskuva](https://github.com/tibe314/Sanajahtiratkaisija/blob/master/dokumentointi/kuvat/sanan_lisays.png)
 
 DatabaseHandler (lyhennetty DBH) siis tarkistaa löytyykö lisättävää sanaa jo tietokannasta, ja sen mukaan joko kutsuu WordScannerin oikeasti sanaa lisäävää metodia addWord(String). Esimerkissä tietokannasta ei alkuun löydy sanaa "sana" ja se yritetään lisätä sinne kahdesti.
+
+Sanan poistamiseen käytettävät delWord(String)-metodit toimivat lähes samalla tavalla, erona on se että välissä kutsutaan WordScannerin omaa metodia copyWords(ArrayList<String>, File) joka ylikirjoittaa kohdetiedoston sisällön uudella listalla, josta nyt on poistettu poistettava sana. Tähän olisi ehkä jokin parempikin keino, mutta ohjelman sisältämistä suurista sanatiedostoista huolimatta ohjelma toimii sulavasti.
+
+Itse koodissa tietokannan nollaaminen on varsin monimutkaista, mutta idea on yksinkertainen: UI kutsuu DatabaseHandler:n kautta resetDB() metodia joka WordScanner:n sisällä kutsuu omaa reset() metodia. Tämä metodi taas poistaa PrivateWordList.txt -tiedoston ja luo sen uudestaan täyttäen sen WordListFinnish.txt -tiedoston sisällöllä.
+
+## Rakenteeseen jääneet heikkoudet
+
+### WordScanner ja DatabaseHandler
+
+Tarve eriyttää sovelluslogiikka käyttöliittymästä niin että UI:lla ei ole tietoa luettavista tai muokattavista tiedostoista johti siihen että WordScanner:n ja DatabaseHandler:n metodit ovat kohteettomia, eli ne muokkaavat koodiin itseensä kirjoitettuja tiedostoja. Tämä johti siihen että sovelluksen automaattiset testit muokkaavat suoraan ohjelman tietokantaa, joten jonkin ongelman ilmaantuessa testit saattavat jättää muokkauksia tietokantaan. Halusin projektissa enemmän keskittyä Algorithm-luokkaan, joten tietokannan muokkauksesta vastaava koodi kirjoitettiin hiukan huolimattomasti, ja syvempi tutustuminen aiheeseen ja sen parempi suunnittelu olisivat johtaneet parempaan lopputulokseen ja säästäneet aikaa loppuvaiheen debugaukselta. Koko DatabaseHandler-luokan tarpeellisuus on hieman kyseenalaista, mutta toisaalta WordScanner on varsin massiivinen luokka.
